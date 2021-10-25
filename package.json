@@ -1,7 +1,7 @@
 {
   "name": "@lbtek/input-masks",
   "version": "1.0.0",
-  "description": "",
+  "description": "Máscaras para campos de entradas em formulários.",
   "repository": "https://github.com/LBtek/input-masks.git",
   "author": "Luan Rafael Barbacovi Berto <luanrafaelberto@gmail.com>",
   "license": "ISC",

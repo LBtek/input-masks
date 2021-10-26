@@ -6,7 +6,7 @@ export const cpfCnpjMask = (e: KeyboardEvent) => {
   element.value = element.value.replace(/\D/g, '')
 
   if (element.value.length > 14) {
-    element.value = element.value.slice(0, 13)
+    element.value = element.value.slice(0, 14)
   }
 
   let arr = ['']
@@ -31,7 +31,7 @@ export const cpfCnpjMask = (e: KeyboardEvent) => {
 
     case 12:
       element.value = element.value.replace(
-        /(\d{2})?(\d{3})?(\d{3})?(\d{4})/,
+        /(\d{2})(\d{3})(\d{3})(\d{4})/,
         '$1.$2.$3/$4'
       )
       break
@@ -39,7 +39,7 @@ export const cpfCnpjMask = (e: KeyboardEvent) => {
     case 13:
     case 14:
       element.value = element.value.replace(
-        /(\d{2})?(\d{3})?(\d{3})?(\d{4})?(\d+)/,
+        /(\d{2})(\d{3})(\d{3})(\d{4})(\d+)/,
         '$1.$2.$3/$4-$5'
       )
       break

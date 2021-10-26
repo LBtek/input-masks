@@ -6,7 +6,7 @@ export const cpfMask = (e: KeyboardEvent) => {
   element.value = element.value.replace(/\D/g, '')
 
   if (element.value.length > 11) {
-    element.value = element.value.slice(0, 10)
+    element.value = element.value.slice(0, 11)
   }
 
   let arr = ['']

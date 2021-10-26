@@ -4,7 +4,7 @@ export const cnpjMask = (e: KeyboardEvent) => {
   element.value = element.value.replace(/\D/g, '')
 
   if (element.value.length > 14) {
-    element.value = element.value.slice(0, 13)
+    element.value = element.value.slice(0, 14)
   }
 
   switch (element.value.length) {
@@ -12,7 +12,7 @@ export const cnpjMask = (e: KeyboardEvent) => {
     case 4:
     case 5:
       element.value = element.value.replace(
-        /(\d{2})?(\d+)/,
+        /(\d{2})(\d+)/,
         '$1.$2'
       )
       break
@@ -21,7 +21,7 @@ export const cnpjMask = (e: KeyboardEvent) => {
     case 7:
     case 8:
       element.value = element.value.replace(
-        /(\d{2})?(\d{3})?(\d+)/,
+        /(\d{2})(\d{3})(\d+)/,
         '$1.$2.$3'
       )
       break
@@ -31,7 +31,7 @@ export const cnpjMask = (e: KeyboardEvent) => {
     case 11:
     case 12:
       element.value = element.value.replace(
-        /(\d{2})?(\d{3})?(\d{3})?(\d+)/,
+        /(\d{2})(\d{3})(\d{3})(\d+)/,
         '$1.$2.$3/$4'
       )
       break
@@ -39,7 +39,7 @@ export const cnpjMask = (e: KeyboardEvent) => {
     case 13:
     case 14:
       element.value = element.value.replace(
-        /(\d{2})?(\d{3})?(\d{3})?(\d{4})?(\d+)/,
+        /(\d{2})(\d{3})(\d{3})(\d{4})(\d+)/,
         '$1.$2.$3/$4-$5'
       )
       break

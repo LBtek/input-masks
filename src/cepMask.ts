@@ -1,12 +1,11 @@
 export const cepMask = (e: KeyboardEvent) => {
   const element = e.target as HTMLInputElement
 
-  let filteredNumbers = element.value.match(/\d+/g)?.join('')
+  element.value = element.value.replace(/\D/g, '')
 
-  if (filteredNumbers && filteredNumbers.length > 8) {
-    filteredNumbers = filteredNumbers.slice(0, 7)
+  if (element.value.length > 8) {
+    element.value = element.value.slice(0, 7)
   }
-  filteredNumbers ? (element.value = filteredNumbers) : (element.value = '')
 
   switch (element.value.length) {
     case 3:

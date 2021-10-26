@@ -3,12 +3,11 @@ import chunkSubstr from "./chunkSubstr"
 export const cpfCnpjMask = (e: KeyboardEvent) => {
   const element = e.target as HTMLInputElement
 
-  let filteredNumbers = element.value.match(/\d+/g)?.join('')
+  element.value = element.value.replace(/\D/g, '')
 
-  if (filteredNumbers && filteredNumbers.length > 14) {
-    filteredNumbers = filteredNumbers.slice(0, 13)
+  if (element.value.length > 14) {
+    element.value = element.value.slice(0, 13)
   }
-  filteredNumbers ? (element.value = filteredNumbers) : (element.value = '')
 
   let arr = ['']
   switch (element.value.length) {

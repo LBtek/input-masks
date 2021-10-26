@@ -4,7 +4,7 @@ export const cepMask = (e: KeyboardEvent) => {
   element.value = element.value.replace(/\D/g, '')
 
   if (element.value.length > 8) {
-    element.value = element.value.slice(0, 7)
+    element.value = element.value.slice(0, 8)
   }
 
   switch (element.value.length) {

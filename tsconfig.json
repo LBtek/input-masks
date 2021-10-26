@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "AMD",
-    "outFile": "./lib/input-masks.js",
+    "module": "CommonJS",
+    "outDir": "lib",
     "strict": true,
     "declaration": true,
     "esModuleInterop": true,

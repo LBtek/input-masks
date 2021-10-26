@@ -1,33 +1,22 @@
-import chunkSubstr from "./chunkSubstr"
-
 export const phoneMask = (e: KeyboardEvent) => {
   const element = e.target as HTMLInputElement
 
   element.value = element.value.replace(/\D/g, '')
 
   if (element.value.length > 11) {
-    element.value = element.value.slice(0, 10)
+    element.value = element.value.slice(0, 11)
   }
 
-  let arr = ['']
   switch (element.value.length) {
-    case 1:
     case 2:
-      arr = chunkSubstr(element.value, 2)
-      arr.unshift('(')
-      if (arr.length < 2) arr.push(' )')
-      else arr.push(')')
-      element.value = arr.join('')
+      if (e.key.toLowerCase() !== 'backspace')
+        element.value = element.value.replace(/(\d{2})/, '($1) ')
       break
-
     case 3:
     case 4:
     case 5:
     case 6:
-      element.value = element.value.replace(
-        /(\d{2})(\d+)/,
-        '($1) $2'
-      )
+      element.value = element.value.replace(/(\d{2})(\d+)/, '($1) $2')
       break
 
     case 7:

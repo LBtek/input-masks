@@ -30,5 +30,5 @@ Available mask functions:
 
   document.getElementById('randomInput')
     .addEventListener('keyup', cpfCnpjMask)
-<script/>
+</script>
 ```

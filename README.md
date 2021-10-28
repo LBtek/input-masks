@@ -38,6 +38,6 @@ Use in a front-end project with resolution of importing modules through nodejs.
 
 To avoid problems with two-way data binding in vue components, you should use the 'lazy' modifier in v-model
 
-To report a problem or suggestion, just open an issue in the [repository](https://github.com/LBtek/input-masks/issues)
+To report a problem or suggestion, just open an issue in the [repository](https://github.com/LBtek/input-masks/issues).
 
 This is an open source project, feel free to collaborate with the development of improvements 🤓.

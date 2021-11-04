@@ -31,8 +31,8 @@ export const phoneMask = (e: KeyboardEvent) => {
 
     case 11:
       element.value = element.value.replace(
-        /(\d{2})(\d{3})(\d{3})(\d{3})/,
-        '($1) $2-$3-$4'
+        /(\d{2})(\d{5})(\d{4})/,
+        '($1) $2-$3'
       )
       break
 
